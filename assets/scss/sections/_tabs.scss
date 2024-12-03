@@ -1,0 +1,142 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Tabs Section
+--------------------------------------------------------------*/
+.tabs {
+  .nav-tabs {
+    border: 0;
+  }
+
+  .nav-link {
+    color: var(--heading-color);
+    background-color: var(--surface-color);
+    padding: 15px 0;
+    transition: 0.3s;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: var(--accent-color);
+      transition: all 0.3s ease-in-out;
+      z-index: -1;
+      border-radius: inherit;
+    }
+
+    i {
+      padding-right: 15px;
+      font-size: 48px;
+    }
+
+    &:hover {
+      color: var(--contrast-color);
+
+      &::before {
+        left: 0;
+      }
+    }
+
+    &.active {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+    }
+  }
+
+  .tab-content-inner {
+    height: 100%;
+    background-color: var(--surface-color);
+    padding: 30px;
+    border-radius: 15px;
+
+    h3 {
+      color: var(--heading-color);
+      font-weight: 700;
+      font-size: 24px;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding-top: 10px;
+      }
+
+      i {
+        font-size: 20px;
+        padding-right: 4px;
+        color: var(--accent-color);
+      }
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .benefits-list {
+      display: grid;
+      gap: 1.5rem;
+      margin: 1.4rem 0;
+
+      .benefit-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        i {
+          font-size: 1.5rem;
+          color: var(--accent-color);
+        }
+
+        h4 {
+          margin: 0;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .btn-cta {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      padding: 0.8rem 2.5rem;
+      border-radius: 2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+        color: var(--contrast-color);
+      }
+
+      i {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover i {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  .image-wrapper {
+    overflow: hidden;
+    border-radius: 15px;
+  }
+}

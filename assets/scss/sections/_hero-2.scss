@@ -1,0 +1,154 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Hero 2 Section
+--------------------------------------------------------------*/
+.hero-2 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 10px 0 0 0;
+    font-size: 24px;
+    color: var(--heading-color);
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .countdown {
+    margin-top: 25px;
+
+    div {
+      text-align: center;
+      border: 2px solid color-mix(in srgb, var(--default-color), white 90%);
+      border-radius: 8px;
+      margin: 10px 10px;
+      width: 100px;
+      padding: 15px 0;
+
+      h3 {
+        font-weight: 700;
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      @media (max-width: 575px) {
+        width: 70px;
+        padding: 10px 0;
+        margin: 10px 8px;
+
+        h3 {
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+
+        h4 {
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .hero-newsletter {
+    margin-top: 25px;
+
+    p {
+      font-size: 18px;
+      margin: 0 0 15px 0;
+    }
+
+    .newsletter-form {
+      margin-bottom: 15px;
+      padding: 6px 8px;
+      position: relative;
+      border-radius: 4px;
+      background-color: var(--surface-color);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      transition: 0.3s;
+      border-radius: 50px;
+
+      &:focus-within {
+        border-color: var(--accent-color);
+      }
+
+      input[type="email"] {
+        border: 0;
+        padding: 4px;
+        width: 100%;
+        background-color: var(--surface-color);
+        color: var(--default-color);
+      }
+
+      input[type="email"]:focus-visible {
+        outline: none;
+      }
+
+      input[type="submit"] {
+        border: 0;
+        font-size: 16px;
+        padding: 0 20px;
+        margin: -7px -8px -7px 0;
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        transition: 0.3s;
+        border-radius: 50px;
+
+        &:hover {
+          background: color-mix(in srgb, var(--accent-color), transparent 20%);
+        }
+      }
+    }
+  }
+
+  .social-links {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+      font-size: 16px;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      margin-right: 10px;
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+      }
+    }
+  }
+}

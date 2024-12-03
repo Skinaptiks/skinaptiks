@@ -1,0 +1,104 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact {
+  .info {
+    background-color: var(--surface-color);
+    padding: 40px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    p {
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+  }
+
+  .info-item {
+    &+.info-item {
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    }
+
+    i {
+      font-size: 24px;
+      color: var(--accent-color);
+      transition: all 0.3s ease-in-out;
+      margin-right: 20px;
+    }
+
+    h4 {
+      padding: 0;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    p {
+      padding: 0;
+      margin-bottom: 0;
+      font-size: 14px;
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+    }
+  }
+
+  .php-email-form {
+    width: 100%;
+
+    .form-group {
+      padding-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      color: var(--default-color);
+      background-color: var(--surface-color);
+      border-radius: 0px;
+      box-shadow: none;
+      font-size: 14px;
+      border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+
+      &:focus {
+        border-color: var(--accent-color);
+      }
+
+      &::placeholder {
+        color: color-mix(in srgb, var(--default-color), transparent 70%);
+      }
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      height: 48px;
+      padding: 10px 15px;
+    }
+
+    textarea {
+      padding: 10px 12px;
+      height: 290px;
+    }
+
+    button[type="submit"] {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      border: 0;
+      padding: 13px 50px;
+      transition: 0.4s;
+      border-radius: 4px;
+
+      &:hover {
+        background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
+      }
+    }
+  }
+}

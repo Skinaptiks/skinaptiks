@@ -1,0 +1,94 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Call To Action Section
+--------------------------------------------------------------*/
+.call-to-action {
+  padding: 0;
+
+  .container {
+    padding: 80px;
+    background: color-mix(in srgb, var(--default-color), transparent 96%);
+    border-radius: 15px;
+
+    @media (max-width: 992px) {
+      padding: 60px;
+    }
+  }
+
+  .content {
+    h3 {
+      font-size: 48px;
+      font-weight: 700;
+
+      em {
+        font-style: normal;
+        position: relative;
+        z-index: 1;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 10px;
+          height: 10px;
+          background: color-mix(in srgb, var(--accent-color), transparent 30%);
+          z-index: -1;
+        }
+      }
+    }
+
+    p {
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      font-weight: 400;
+      font-size: 18px;
+    }
+
+    .cta-btn {
+      color: var(--contrast-color);
+      font-weight: 500;
+      font-size: 16px;
+      display: inline-block;
+      padding: 12px 40px;
+      border-radius: 50px;
+      transition: 0.5s;
+      margin-top: 10px;
+      background: var(--accent-color);
+
+      &:hover {
+        background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
+      }
+    }
+  }
+
+  .img {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: color-mix(in srgb, var(--contrast-color), transparent 20%);
+      border-radius: 15px;
+      transform: rotate(6deg);
+      z-index: 2;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: color-mix(in srgb, var(--default-color), transparent 95%);
+      border-radius: 15px;
+      transform: rotate(12deg);
+      z-index: 1;
+    }
+
+    img {
+      position: relative;
+      z-index: 3;
+      border-radius: 15px;
+      z-index: 3;
+    }
+  }
+}

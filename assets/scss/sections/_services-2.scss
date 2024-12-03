@@ -1,0 +1,25 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Services 2 Section
+--------------------------------------------------------------*/
+.services-2 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .services-item {
+    .services-icon {
+      color: var(--accent-color);
+      margin-bottom: 20px;
+
+      i {
+        font-size: 48px;
+      }
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--heading-color);
+    }
+  }
+}
