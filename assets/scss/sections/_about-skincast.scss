@@ -1,0 +1,95 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# About Skincast Section
+--------------------------------------------------------------*/
+.about-skincast {
+  .small-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--accent-color);
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @media (max-width: 992px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  .about-description {
+    color: color-mix(in srgb, var(--default-color), transparent 25%);
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 992px) {
+    .description-wrapper {
+      border-left: 1px solid var(--accent-color);
+      padding-left: 30px;
+    }
+  }
+
+  .content-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .card-image {
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      border-radius: 12px;
+
+      img {
+        transition: transform 0.5s ease;
+      }
+    }
+
+    .card-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      p {
+        color: color-mix(in srgb, var(--default-color), transparent 25%);
+        margin-bottom: 1.5rem;
+        flex: 1;
+      }
+
+      .read-more {
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &:hover {
+          gap: 0.75rem;
+
+          i {
+            transform: translateX(5px);
+          }
+        }
+
+        i {
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+
+    &:hover {
+      .card-image img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

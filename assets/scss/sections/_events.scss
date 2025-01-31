@@ -1,0 +1,47 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Events Section
+--------------------------------------------------------------*/
+.events {
+  .details {
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .social {
+      margin-bottom: 15px;
+
+      a {
+        background: color-mix(in srgb, var(--default-color), transparent 92%);
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        line-height: 1;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          background: var(--accent-color);
+          color: var(--contrast-color);
+        }
+
+        i {
+          font-size: 16px;
+          line-height: 0;
+        }
+      }
+    }
+
+    p {
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+  }
+}
